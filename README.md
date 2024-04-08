@@ -1,3 +1,5 @@
+[![Android build](https://github.com/AmazonAppDev/hello-world-fire-tv/actions/workflows/android.yml/badge.svg)](https://github.com/AmazonAppDev/hello-world-fire-tv/actions/workflows/android.yml)
+
 # 📺 🔥 Hello World Fire TV App
 
 Learn how to create a simple Fire TV app using Android Jetpack Compose and get it running in just 5 minutes! ⏰📺
