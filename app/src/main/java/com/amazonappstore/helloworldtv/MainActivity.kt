@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -31,16 +32,15 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import androidx.tv.foundation.lazy.grid.TvGridCells
-import androidx.tv.foundation.lazy.grid.TvGridItemSpan
-import androidx.tv.foundation.lazy.grid.TvLazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.tv.material3.Border
+import androidx.tv.material3.Card
 import androidx.tv.material3.CardDefaults
-import androidx.tv.material3.CardLayoutDefaults
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.ShapeDefaults
-import androidx.tv.material3.StandardCardLayout
+import androidx.tv.material3.StandardCardContainer
 import androidx.tv.material3.Text
 import com.amazonappstore.helloworldtv.ui.theme.BlueGray300
 import com.amazonappstore.helloworldtv.ui.theme.HelloWorldTVTheme
@@ -64,8 +64,8 @@ class MainActivity : ComponentActivity() {
                             route = Screens.Home.name
                         ) {
                             HomeDrawer(content = {
-                                TvLazyVerticalGrid(
-                                    columns = TvGridCells.Fixed(5),
+                                LazyVerticalGrid(
+                                    columns = GridCells.Fixed(5),
                                     contentPadding = PaddingValues(
                                         start = 24.dp,
                                         top = 24.dp,
@@ -74,16 +74,16 @@ class MainActivity : ComponentActivity() {
                                     ),
                                 ) {
                                     item(span = {
-                                        TvGridItemSpan(5)
+                                        GridItemSpan(5)
                                     }) {
                                         GridHeader()
                                     }
                                     items(30) {
                                         var isFocused by remember { mutableStateOf(false) }
 
-                                        StandardCardLayout(
+                                        StandardCardContainer(
                                             imageCard = {
-                                                CardLayoutDefaults.ImageCard(
+                                                Card(
                                                     shape = CardDefaults.shape(shape = ShapeDefaults.ExtraSmall),
                                                     border = CardDefaults.border(
                                                         focusedBorder = Border(
