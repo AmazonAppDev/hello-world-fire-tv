@@ -22,7 +22,7 @@ Key features include:
 - Implementing a [tv navigation drawer](https://developer.android.com/design/ui/tv/guides/components/navigation-drawer) 🗺️
 - Changing light/dark theme based on the device system theme 🌗
 - Showcasing:
-- [TVLazyVerticalGrid](https://developer.android.com/jetpack/compose/lists#lazy-grids) 📜
+- [LazyVerticalGrid](https://developer.android.com/jetpack/compose/lists#lazy-grids) 📜
 - [Card layout](https://developer.android.com/design/ui/tv/guides/components/cards#standard-card) 🃏
 - [NavHost](https://developer.android.com/reference/androidx/navigation/NavHost) 🧭
 
