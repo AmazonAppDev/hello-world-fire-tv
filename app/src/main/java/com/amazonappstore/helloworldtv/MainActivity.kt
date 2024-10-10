@@ -48,7 +48,6 @@ import com.amazonappstore.helloworldtv.ui.theme.Red300
 
 class MainActivity : ComponentActivity() {
 
-    @OptIn(ExperimentalTvMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -72,6 +71,7 @@ class MainActivity : ComponentActivity() {
                                         end = 24.dp,
                                         bottom = 48.dp
                                     ),
+                                    modifier = Modifier.background(color = MaterialTheme.colorScheme.background)
                                 ) {
                                     item(span = {
                                         GridItemSpan(5)
@@ -99,7 +99,7 @@ class MainActivity : ComponentActivity() {
                                                                 color = MaterialTheme.colorScheme.border
                                                             ),
                                                             shape = ShapeDefaults.ExtraSmall
-                                                        )
+                                                        ),
                                                     ),
                                                     scale = CardDefaults.scale(focusedScale = 1f),
                                                     onClick = { },

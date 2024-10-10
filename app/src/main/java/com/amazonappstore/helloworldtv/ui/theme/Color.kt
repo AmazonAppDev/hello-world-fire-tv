@@ -16,3 +16,6 @@ val Pink40 = Color(0xFF7D5260)
 
 val Red300 = Color(0xFFE57373)
 val BlueGray300 = Color(0xFF90A4AE)
+
+val Gray400 = Color(0xFFBDBDBD)
+val Black = Color(0xFF030303)

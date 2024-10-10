@@ -6,12 +6,11 @@ package com.amazonappstore.helloworldtv.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable
-import androidx.tv.material3.ExperimentalTvMaterial3Api
+import androidx.compose.ui.graphics.Color
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.darkColorScheme
 import androidx.tv.material3.lightColorScheme
 
-@OptIn(ExperimentalTvMaterial3Api::class)
 @Composable
 fun HelloWorldTVTheme(
     isInDarkTheme: Boolean = isSystemInDarkTheme(),
@@ -21,13 +20,17 @@ fun HelloWorldTVTheme(
         darkColorScheme(
             primary = Purple80,
             secondary = PurpleGrey80,
-            tertiary = Pink80
+            tertiary = Pink80,
+            background = Black,
+            surfaceVariant = Color.LightGray
         )
     } else {
         lightColorScheme(
             primary = Purple40,
             secondary = PurpleGrey40,
-            tertiary = Pink40
+            tertiary = Pink40,
+            background = Gray400,
+            surfaceVariant = Black
         )
     }
     MaterialTheme(
